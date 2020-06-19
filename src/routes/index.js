@@ -14,34 +14,34 @@ const ForgetPassword = React.lazy(() => import('../pages/auth/ForgetPassword'));
 const Confirm = React.lazy(() => import('../pages/auth/Confirm'));
 // dashboard
 const EcommerceDashboard = React.lazy(() => import('../pages/dashboards/Ecommerce'));
-const CRMDashboard = React.lazy(() => import('../pages/dashboards/CRM'));
-const AnalyticsDashboard = React.lazy(() => import('../pages/dashboards/Analytics'));
-const ProjectDashboard = React.lazy(() => import('../pages/dashboards/Project'));
+//const CRMDashboard = React.lazy(() => import('../pages/dashboards/CRM'));
+//const AnalyticsDashboard = React.lazy(() => import('../pages/dashboards/Analytics'));
+//const ProjectDashboard = React.lazy(() => import('../pages/dashboards/Project'));
 // apps
 const CalendarApp = React.lazy(() => import('../pages/apps/Calendar'));
-const Projects = React.lazy(() => import('../pages/apps/Projects/'));
+//const Projects = React.lazy(() => import('../pages/apps/Projects/'));
 const ProjectDetail = React.lazy(() => import('../pages/apps/Projects/Detail/'));
-const ProjectGannt = React.lazy(() => import('../pages/apps/Projects/Gantt/'));
+//const ProjectGannt = React.lazy(() => import('../pages/apps/Projects/Gantt/'));
 const ProjectForm = React.lazy(() => import('../pages/apps/Projects/ProjectForm'));
 // - ecommece pages
 const EcommerceProducts = React.lazy(() => import('../pages/apps/Ecommerce/Products'));
-const ProductDetails = React.lazy(() => import('../pages/apps/Ecommerce/ProductDetails'));
+//const ProductDetails = React.lazy(() => import('../pages/apps/Ecommerce/ProductDetails'));
 const Orders = React.lazy(() => import('../pages/apps/Ecommerce/Orders'));
 const OrderDetails = React.lazy(() => import('../pages/apps/Ecommerce/OrderDetails'));
 const Customers = React.lazy(() => import('../pages/apps/Ecommerce/Customers'));
-const Cart = React.lazy(() => import('../pages/apps/Ecommerce/Cart'));
-const Checkout = React.lazy(() => import('../pages/apps/Ecommerce/Checkout/'));
-const Sellers = React.lazy(() => import('../pages/apps/Ecommerce/Sellers'));
+//const Cart = React.lazy(() => import('../pages/apps/Ecommerce/Cart'));
+//const Checkout = React.lazy(() => import('../pages/apps/Ecommerce/Checkout/'));
+//const Sellers = React.lazy(() => import('../pages/apps/Ecommerce/Sellers'));
 // chat
 const ChatApp = React.lazy(() => import('../pages/apps/Chat/'));
 // social
-const SocialFeed = React.lazy(() => import('../pages/apps/SocialFeed/'));
+//const SocialFeed = React.lazy(() => import('../pages/apps/SocialFeed/'));
 // tasks
-const TaskList = React.lazy(() => import('../pages/apps/Tasks/List/'));
+//const TaskList = React.lazy(() => import('../pages/apps/Tasks/List/'));
 const Kanban = React.lazy(() => import('../pages/apps/Tasks/Board/'));
 
 // - email
-const Inbox = React.lazy(() => import('../pages/apps/Email/Inbox'));
+//const Inbox = React.lazy(() => import('../pages/apps/Email/Inbox'));
 const EmailDetail = React.lazy(() => import('../pages/apps/Email/Detail'));
 
 // pages
@@ -51,10 +51,10 @@ const ErrorPageNotFound = React.lazy(() => import('../pages/error/PageNotFound')
 const ServerError = React.lazy(() => import('../pages/error/ServerError'));
 
 // - other
-const Invoice = React.lazy(() => import('../pages/other/Invoice'));
+//const Invoice = React.lazy(() => import('../pages/other/Invoice'));
 const FAQ = React.lazy(() => import('../pages/other/FAQ'));
 const Pricing = React.lazy(() => import('../pages/other/Pricing'));
-const Timeline = React.lazy(() => import('../pages/other/Timeline'));
+//const Timeline = React.lazy(() => import('../pages/other/Timeline'));
 
 // uikit
 const Accordions = React.lazy(() => import('../pages/uikit/Accordions'));
@@ -139,7 +139,7 @@ const dashboardRoutes = {
     icon: 'uil-home-alt',
     header: 'Navigation',
     children: [
-        {
+        /*{
             path: '/dashboard/analytics',
             name: 'Analytics',
             component: AnalyticsDashboard,
@@ -150,7 +150,7 @@ const dashboardRoutes = {
             name: 'CRM',
             component: CRMDashboard,
             route: PrivateRoute,
-        },
+        },*/
         {
             path: '/dashboard/ecommerce',
             name: 'Ecommerce',
@@ -161,12 +161,12 @@ const dashboardRoutes = {
             component: EcommerceDashboard,
             route: PrivateRoute,
         },
-        {
+        /*{
             path: '/dashboard/project',
             name: 'Project',
             component: ProjectDashboard,
             route: PrivateRoute,
-        },
+        },*/
     ],
 };
 
@@ -202,12 +202,12 @@ const ecommerceAppRoutes = {
             component: EcommerceProducts,
             route: PrivateRoute,
         },
-        {
+        /*{
             path: '/apps/ecommerce/details',
             name: 'Product Details',
             component: ProductDetails,
             route: PrivateRoute,
-        },
+        },*/
         {
             path: '/apps/ecommerce/orders',
             name: 'Orders',
@@ -226,7 +226,7 @@ const ecommerceAppRoutes = {
             component: Customers,
             route: PrivateRoute,
         },
-        {
+        /*{
             path: '/apps/ecommerce/shopping-cart',
             name: 'Shopping Cart',
             component: Cart,
@@ -243,7 +243,7 @@ const ecommerceAppRoutes = {
             name: 'Sellers',
             component: Sellers,
             route: PrivateRoute,
-        },
+        },*/
     ],
 };
 
@@ -254,12 +254,12 @@ const emailAppRoutes = {
     roles: ['Admin'],
     icon: 'uil-envelope',
     children: [
-        {
+        /*{
             path: '/apps/email/inbox',
             name: 'Inbox',
             component: Inbox,
             route: PrivateRoute,
-        },
+        },*/
         {
             path: '/apps/email/details',
             name: 'Email Details',
@@ -277,24 +277,24 @@ const projectAppRoutes = {
     icon: 'uil-briefcase',
 
     children: [
-        {
+        /*{
             path: '/apps/projects/list',
             name: 'List',
             component: Projects,
             route: PrivateRoute,
-        },
+        },*/
         {
             path: '/apps/projects/:id/details',
             name: 'Detail',
             component: ProjectDetail,
             route: PrivateRoute,
         },
-        {
+        /*{
             path: '/apps/projects/gantt',
             name: 'Gantt',
             component: ProjectGannt,
             route: PrivateRoute,
-        },
+        },*/
         {
             path: '/apps/projects/new',
             name: 'Create Project',
@@ -304,14 +304,14 @@ const projectAppRoutes = {
     ],
 };
 
-const socialAppRoutes = {
+/*const socialAppRoutes = {
     path: '/apps/social',
     name: 'Social Feed',
     route: PrivateRoute,
     roles: ['Admin'],
     icon: 'uil-rss',
     component: SocialFeed,
-};
+};*/
 
 const taskAppRoutes = {
     path: '/apps/tasks',
@@ -320,12 +320,12 @@ const taskAppRoutes = {
     roles: ['Admin'],
     icon: 'uil-clipboard-alt',
     children: [
-        {
+        /*{
             path: '/apps/tasks/list',
             name: 'Task List',
             component: TaskList,
             route: PrivateRoute,
-        },
+        },*/
         {
             path: '/apps/tasks/kanban',
             name: 'Kanban',
@@ -341,7 +341,7 @@ const appRoutes = [
     ecommerceAppRoutes,
     emailAppRoutes,
     projectAppRoutes,
-    socialAppRoutes,
+    //socialAppRoutes,
     taskAppRoutes,
 ];
 
@@ -364,12 +364,12 @@ const pageRoutes = {
             component: Profile,
             route: PrivateRoute,
         },
-        {
+        /*{
             path: '/pages/invoice',
             name: 'Invoice',
             component: Invoice,
             route: PrivateRoute,
-        },
+        },*/
         {
             path: '/pages/faq',
             name: 'FAQ',
@@ -394,12 +394,12 @@ const pageRoutes = {
             component: ServerError,
             route: PrivateRoute,
         },
-        {
+        /*{
             path: '/pages/timeline',
             name: 'Timeline',
             component: Timeline,
             route: PrivateRoute,
-        },
+        },*/
     ],
 };
 
