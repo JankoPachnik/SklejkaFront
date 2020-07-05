@@ -212,7 +212,7 @@ const Orders = () => {
     const columns = [
         {
             dataField: 'order_id',
-            text: 'Order ID',
+            text: 'Order ID', ///Zmiana nazwy headera tabeli
             sort: true,
             formatter: OrderColumn,
         },
@@ -235,7 +235,7 @@ const Orders = () => {
         },
         {
             dataField: 'payment_method',
-            text: 'Payment Method',
+            text: 'Name',
             sort: false,
         },
         {
